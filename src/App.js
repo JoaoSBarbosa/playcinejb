@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Tmdb from "./Tmdb";
 import MovieSlider from "./components/MovieSlider";
+import './App.css';
+
 export default () => {
   const [movieList, setMovieList] = useState([]);
 

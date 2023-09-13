@@ -1,3 +1,27 @@
-.movieSlider--linearea{
-  
+.movieSlider {
+  margin-bottom: 30px;
+}
+.movieSlider h2 {
+  margin: 0 0 0 30px;
+}
+.movieSlider--linearea {
+  overflow-x: hidden;
+  padding-left: 30px;
+}
+.movieSlider--list {
+  width: 90000px;
+}
+.movieSlider--item {
+  display: inline-block;
+  width: 150px;
+}
+.movieSlider--item img {
+  width: 100%;
+  transform: scale(0.9);
+  transition: all ease .2s;
+}
+.movieSlider--item img:hover {
+  transform: scale(1);
+  cursor: pointer;
+
 }
