@@ -2,9 +2,6 @@ import React from "react";
 import "./MovieSlider.css";
 
 export default ({ title, items }) => {
-  console.log("Resultttttt");
-  console.log(items.results[2].poster_path);
-  console.log(items.results[2]);
   return (
     <div className="movieSlider">
       <h2>{title}</h2>
