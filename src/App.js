@@ -9,14 +9,21 @@ export default () => {
   const [featureData, setFeatureData] = useState(null);
   useEffect(() => {
     const loadAll = async () => {
-      //Pegando a lista
-      let list = await Tmdb.getHomeList();
-      setMovieList(list);
-      //Pegando o featured
-      let originals = list.filter(i=>i.slug === 'originals')
-      let rabdomChosen = Math.floor(Math.random() * (originals[0].items.results.length -1));
+      let list = await Tmdb.getHomeList(); //Pegando a lista
+      setMovieList(list); // adicionando no states
+      //Pegando na lista o filme para usar como destaque,desde que slug for originais
+      let originals = list.filter((i) => i.slug === "originals");
+      //Gerando um numero aleatorio
+      let rabdomChosen = Math.floor(
+        Math.random() * (originals[0].items.results.length - 1)
+      );
+      //pegando um filme aleatório baseado ao número gerado
       let chose = originals[0].items.results[rabdomChosen];
-      console.log(chose);
+      //Pegando mais informação do item específico
+      let choseInfo = await Tmdb.getMovieInfo(chose.id, 'tv')
+      //Enviando essas informações para state
+      setFeatureData(choseInfo);
+      // console.log(choseInfo)
     };
 
     loadAll();
@@ -25,7 +32,6 @@ export default () => {
   return (
     <div className="page">
       {featureData && <FeaturedMovie item={featureData} />}
-
       <section className="lists">
         {movieList.map((item, key) => (
           <MovieSlider key={key} title={item.title} items={item.items} />
