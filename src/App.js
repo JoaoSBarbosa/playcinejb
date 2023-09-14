@@ -20,10 +20,10 @@ export default () => {
       //pegando um filme aleatório baseado ao número gerado
       let chose = originals[0].items.results[rabdomChosen];
       //Pegando mais informação do item específico
-      let choseInfo = await Tmdb.getMovieInfo(chose.id, 'tv')
+      let choseInfo = await Tmdb.getMovieInfo(chose.id, "tv");
       //Enviando essas informações para state
       setFeatureData(choseInfo);
-      // console.log(choseInfo)
+      console.log(choseInfo);
     };
 
     loadAll();
