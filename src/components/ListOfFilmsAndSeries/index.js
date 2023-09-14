@@ -1,5 +1,5 @@
 import React from "react";
-import "./MovieSlider.css";
+import "./index.css";
 
 export default ({ title, items }) => {
   return (

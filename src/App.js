@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
-import Tmdb from "./Tmdb";
-import MovieSlider from "./components/MovieSlider";
-import FeaturedMovie from "./components/FeaturedMovie";
+import Tmdb from "./components/Tmdb";
+import MovieSlider from "./components/ListOfFilmsAndSeries";
+import FeaturedMovie from "./components/Featured";
+import Header from "./components/Header";
 import "./App.css";
 
 export default () => {
   const [movieList, setMovieList] = useState([]);
   const [featureData, setFeatureData] = useState(null);
+  const [blackHeader, setBlackHeader] = useState(false);
+
   useEffect(() => {
     const loadAll = async () => {
       let list = await Tmdb.getHomeList(); //Pegando a lista
@@ -29,8 +32,22 @@ export default () => {
     loadAll();
   }, []);
 
+  useEffect(() => {
+    const scrollListener = () => {
+      if(window.scrollY > 10){
+        setBlackHeader(true);
+      }else{
+        setBlackHeader(false);
+      }
+    };
+    window.addEventListener("scroll", scrollListener);
+    return () => {
+      window.removeEventListener("scroll", scrollListener);
+    };
+  }, []);
   return (
     <div className="page">
+      <Header black={blackHeader} />
       {featureData && <FeaturedMovie item={featureData} />}
       <section className="lists">
         {movieList.map((item, key) => (

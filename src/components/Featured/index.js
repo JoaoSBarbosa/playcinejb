@@ -1,6 +1,6 @@
 import React from "react";
-import "./FeaturedMovie.css";
-import { StyledLink } from "./button";
+import "./index.css";
+import { StyledLink } from "../Buttons/button";
 
 export default ({ item }) => {
   let firstDate = new Date(item.first_air_date);
@@ -34,9 +34,19 @@ export default ({ item }) => {
                 : item.overview}
             </div>
             <div className="featured--buttons">
-              <StyledLink bgColor="#fff" textColor="#000" href={`/watch/${item.id}`}>►Assistir
+              <StyledLink
+                bgColor="#fff"
+                textColor="#000"
+                href={`/watch/${item.id}`}
+              >
+                ►Assistir
               </StyledLink>
-              <StyledLink bgColor="#333" textColor="#fff" href={`/list/add/${item.id}`}>+ Minha Lista
+              <StyledLink
+                bgColor="#333"
+                textColor="#fff"
+                href={`/list/add/${item.id}`}
+              >
+                + Minha Lista
               </StyledLink>
             </div>
             <div className="featured--genres">Gêneros: {genres.join(", ")}</div>
