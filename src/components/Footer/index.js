@@ -66,6 +66,17 @@ export default () => {
           </a>
         </p>
         <p>
+          Utilização de dados provenientes do site{" "}
+          <a
+            href="https://www.themoviedb.org/?language=pt-BR"
+            target="_blank"
+            className="footer--link"
+            id="tmdb"
+          >
+            TMDB
+          </a>
+        </p>
+        <p>
           Créditos pela ideia do projeto e aulas{" "}
           <a
             href="https://alunos.b7web.com.br/"

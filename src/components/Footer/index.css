@@ -57,6 +57,9 @@
 .footer-credits a#b7web::after {
   background-color: #1694e2;
 }
+.footer-credits a#tmdb::after {
+  background-color: #8fe9d8;
+}
 .footer-credits a:hover::after {
   width: 100%;
 }
@@ -68,4 +71,7 @@
 }
 .footer-credits #netflix:hover {
   color: #e50914;
+}
+.footer-credits #tmdb:hover {
+  color: #67c6b5;
 }
