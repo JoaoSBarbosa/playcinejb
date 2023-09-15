@@ -3,6 +3,7 @@ import Tmdb from "./components/Tmdb";
 import MovieSlider from "./components/ListOfFilmsAndSeries";
 import FeaturedMovie from "./components/Featured";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import "./App.css";
 
 export default () => {
@@ -34,9 +35,9 @@ export default () => {
 
   useEffect(() => {
     const scrollListener = () => {
-      if(window.scrollY > 10){
+      if (window.scrollY > 10) {
         setBlackHeader(true);
-      }else{
+      } else {
         setBlackHeader(false);
       }
     };
@@ -54,6 +55,7 @@ export default () => {
           <MovieSlider key={key} title={item.title} items={item.items} />
         ))}
       </section>
+      <Footer />
     </div>
   );
 };

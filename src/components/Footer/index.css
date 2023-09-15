@@ -1,0 +1,71 @@
+.footer {
+  background-color: #141414;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  font-size: 1.3rem;
+}
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+.footer--contato {
+  padding: 10px;
+}
+.footer--contato p {
+}
+.footer--about-icons {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer--about-icons a {
+  font-size: 3.2rem;
+}
+.footer-credits {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #111111;
+  padding: 20px 0;
+}
+.footer-credits a {
+  position: relative;
+}
+.footer-credits a::after {
+  content: "";
+  height: 3px;
+  border-radius: 4px;
+  width: 0%;
+  display: block;
+  transition: all ease 0.5s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.footer-credits a#netflix::after {
+  background-color: #fd2631;
+}
+.footer-credits a#dev::after {
+  background-color: #842cf0;
+}
+.footer-credits a#b7web::after {
+  background-color: #1694e2;
+}
+.footer-credits a:hover::after {
+  width: 100%;
+}
+.footer-credits #b7web:hover {
+  color: #0071b7;
+}
+.footer-credits #dev:hover {
+  color: #711cdb;
+}
+.footer-credits #netflix:hover {
+  color: #e50914;
+}
