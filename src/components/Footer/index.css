@@ -1,11 +1,17 @@
+:root {
+  --center: center;
+  --flex: flex;
+  --wrap: wrap;
+}
 .footer {
   background-color: #141414;
 }
 .footer-container {
-  display: flex;
+  display: var(--flex);
   justify-content: space-around;
   overflow: hidden;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  flex-wrap: var(--wrap);
 }
 .footer a {
   text-decoration: none;
@@ -17,18 +23,20 @@
 .footer--contato p {
 }
 .footer--about-icons {
-  display: flex;
+  display: var(--flex);
   gap: 30px;
-  align-items: center;
+  align-items: var(--center);
   justify-content: space-between;
+  flex-wrap: var(--wrap);
 }
 .footer--about-icons a {
-  font-size: 3.2rem;
+  font-size: 1.8rem;
 }
 .footer-credits {
-  text-align: center;
+  text-align: var(--center);
   display: flex;
-  align-items: center;
+  align-items: var(--center);
+  flex-wrap: var(--wrap);
   justify-content: space-around;
   background-color: #111111;
   padding: 20px 0;

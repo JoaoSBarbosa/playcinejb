@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,18 +7,39 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default ({ title, items }) => {
+  const [scrollX, setScrollX] = useState(-400);
+  const handleRightArrow = () => {
+    let x = scrollX - Math.round(window.innerWidth / 2);
+
+    let listWidth = items.results.length * 150;
+    if (window.innerWidth - listWidth > x) {
+      x = window.innerWidth - listWidth - 60;
+    }
+    setScrollX(x);
+  };
+
+  const handleLeftArrow = () => {
+    let x = scrollX + Math.round(window.innerWidth / 2);
+    if (x > 0) {
+      x = 0;
+    }
+    setScrollX(x);
+  };
   return (
     <div className="movieSlider">
       <h2>{title}</h2>
-      <div className="movieSlider--left">
-        <FontAwesomeIcon icon={faChevronLeft} style={{fontSize:50}}/>
+      <div className="movieSlider--left" onClick={handleLeftArrow}>
+        <FontAwesomeIcon icon={faChevronLeft} style={{ fontSize: 50 }} />
       </div>
-      <div className="movieSlider--right">
-        <FontAwesomeIcon icon={faChevronRight} style={{fontSize:50}}/>
+      <div className="movieSlider--right" onClick={handleRightArrow}>
+        <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: 50 }} />
       </div>
 
       <div className="movieSlider--linearea">
-        <div className="movieSlider--list">
+        <div
+          className="movieSlider--list"
+          style={{ marginLeft: scrollX, width: items.results.length * 150 }}
+        >
           {items.results.length > 0 &&
             items.results.map((item, key) => (
               <div className="movieSlider--item" key={key}>

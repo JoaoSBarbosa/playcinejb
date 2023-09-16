@@ -9,15 +9,18 @@
   padding-left: 30px;
 }
 .movieSlider--list {
-  width: 90000px;
+  transition: all ease 0.5s;
 }
 .movieSlider--item {
   display: inline-block;
   width: 150px;
   cursor: pointer;
+  height: 202.5px;
 }
 .movieSlider--item img {
   width: 100%;
+  min-height: 202.5px;
+  object-fit: cover;
   transform: scale(0.9);
   transition: all ease 0.2s;
 }

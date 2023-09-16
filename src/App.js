@@ -13,21 +13,15 @@ export default () => {
 
   useEffect(() => {
     const loadAll = async () => {
-      let list = await Tmdb.getHomeList(); //Pegando a lista
-      setMovieList(list); // adicionando no states
-      //Pegando na lista o filme para usar como destaque,desde que slug for originais
+      let list = await Tmdb.getHomeList();
+      setMovieList(list);
       let originals = list.filter((i) => i.slug === "originals");
-      //Gerando um numero aleatorio
-      let rabdomChosen = Math.floor(
+      let randomChosen = Math.floor(
         Math.random() * (originals[0].items.results.length - 1)
       );
-      //pegando um filme aleatório baseado ao número gerado
-      let chose = originals[0].items.results[rabdomChosen];
-      //Pegando mais informação do item específico
-      let choseInfo = await Tmdb.getMovieInfo(chose.id, "tv");
-      //Enviando essas informações para state
-      setFeatureData(choseInfo);
-      console.log(choseInfo);
+      let chosen = originals[0].items.results[randomChosen];
+      let chosenInfo = await Tmdb.getMovieInfo(chosen.id, "tv");
+      setFeatureData(chosenInfo);
     };
 
     loadAll();
@@ -46,6 +40,7 @@ export default () => {
       window.removeEventListener("scroll", scrollListener);
     };
   }, []);
+
   return (
     <div className="page">
       <Header black={blackHeader} />
@@ -56,6 +51,13 @@ export default () => {
         ))}
       </section>
       <Footer />
+
+      {movieList.length <= 0 && (
+        <div className="loading">
+          <div className="loading-text">Carregando...</div>
+          <img src="./loading1.gif" alt="Loading" />
+        </div>
+      )}
     </div>
   );
 };
