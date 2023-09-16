@@ -83,3 +83,21 @@
 .footer-credits #tmdb:hover {
   color: #67c6b5;
 }
+@media (max-width: 1637px) {
+  .footer-credits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 1000px) {
+  .footer-credits {
+    padding: 2rem 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: start;
+  }
+ 
+}

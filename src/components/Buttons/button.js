@@ -18,4 +18,20 @@ export const StyledLink = styled.a`
   &:hover {
     opacity: 0.7;
   }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  @media (max-width: 350px) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 140px;
+  }
 `;

@@ -41,7 +41,7 @@ export default ({ item }) => {
                 textColor="#000"
                 href={`/watch/${item.id}`}
               >
-                <FontAwesomeIcon icon={faPlay} />
+                <FontAwesomeIcon icon={faPlay} className="featured--icon"/>
                 Assistir
               </StyledLink>
               <StyledLink

@@ -7,7 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export default ({ title, items }) => {
-  const [scrollX, setScrollX] = useState(-400);
+  const [scrollX, setScrollX] = useState(0);
   const handleRightArrow = () => {
     let x = scrollX - Math.round(window.innerWidth / 2);
 
@@ -29,10 +29,10 @@ export default ({ title, items }) => {
     <div className="movieSlider">
       <h2>{title}</h2>
       <div className="movieSlider--left" onClick={handleLeftArrow}>
-        <FontAwesomeIcon icon={faChevronLeft} style={{ fontSize: 50 }} />
+        <FontAwesomeIcon icon={faChevronLeft} className="arrow" />
       </div>
       <div className="movieSlider--right" onClick={handleRightArrow}>
-        <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: 50 }} />
+        <FontAwesomeIcon icon={faChevronRight} className="arrow"/>
       </div>
 
       <div className="movieSlider--linearea">

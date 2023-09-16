@@ -32,3 +32,10 @@ header.black {
   -moz-box-shadow: 6px -2px 16px 11px rgba(32, 233, 247, 0.76);
   box-shadow: 6px -2px 16px 11px rgba(32, 233, 247, 0.76);
 }
+
+@media(max-width:760px){
+  .header--logo,
+  .header--user {
+    height: 50px;
+  }
+}
