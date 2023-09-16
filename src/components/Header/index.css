@@ -23,9 +23,9 @@ header.black {
 .header--user img {
   height: 100%;
 }
-.header--user{
+.header--user {
   border-radius: 5px;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
 }
 .header--user:hover {
   -webkit-box-shadow: 6px -2px 16px 11px rgba(32, 233, 247, 0.76);

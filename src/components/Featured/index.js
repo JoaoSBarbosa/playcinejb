@@ -1,6 +1,8 @@
 import React from "react";
 import "./index.css";
 import { StyledLink } from "../Buttons/button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 export default ({ item }) => {
   let firstDate = new Date(item.first_air_date);
@@ -39,7 +41,8 @@ export default ({ item }) => {
                 textColor="#000"
                 href={`/watch/${item.id}`}
               >
-                ►Assistir
+                <FontAwesomeIcon icon={faPlay} />
+                Assistir
               </StyledLink>
               <StyledLink
                 bgColor="#333"

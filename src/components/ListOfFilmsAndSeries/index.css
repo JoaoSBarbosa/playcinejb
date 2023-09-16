@@ -24,3 +24,28 @@
 .movieSlider--item img:hover {
   transform: scale(1);
 }
+.movieSlider--left,
+.movieSlider--right {
+  position: absolute;
+  width: 40px;
+  height: 225px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+.movieSlider:hover .movieSlider--left,
+.movieSlider:hover .movieSlider--right {
+  opacity: 1;
+}
+.movieSlider--left {
+  left: 0;
+}
+.movieSlider--right {
+  right: 0;
+}
