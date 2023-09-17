@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import Bandeiras from "../Flags";
+import { StyledLink } from "../Buttons/button";
 
 const Modal = ({
   isOpen,
@@ -84,6 +85,14 @@ const Modal = ({
                 ? overview
                 : "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here"}
             </p>
+            <div className="featured--buttons">
+              <StyledLink bgColor="#fff" textColor="#000" href="./">
+                ▶️ Assistir
+              </StyledLink>
+              <StyledLink bgColor="#333" textColor="#fff" href="./">
+                + Minha Lista
+              </StyledLink>
+            </div>
           </div>
         </div>
       </div>
