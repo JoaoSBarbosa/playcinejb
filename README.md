@@ -1,4 +1,5 @@
-![GitLab language count](https://img.shields.io/gitlab/languages/count/https%3A%2F%2Fgithub.com%2FJoaoSBarbosa%2Fplaycinejb)![GitHub top language](https://img.shields.io/github/languages/top/JoaoSBarbosa/https%3A%2F%2Fgithub.com%2FJoaoSBarbosa%2Fplaycinejb)
+![GitHub language count](https://img.shields.io/github/languages/count/JoaoSBarbosa/playcinejb)
+![GitHub top language](https://img.shields.io/github/languages/top/JoaoSBarbosa/playcinejb)
 
 
 
