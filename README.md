@@ -1,3 +1,7 @@
+![GitLab language count](https://img.shields.io/gitlab/languages/count/https%3A%2F%2Fgithub.com%2FJoaoSBarbosa%2Fplaycinejb)![GitHub top language](https://img.shields.io/github/languages/top/JoaoSBarbosa/https%3A%2F%2Fgithub.com%2FJoaoSBarbosa%2Fplaycinejb)
+
+
+
 # Clone do Netflix em React
 
 Este é um projeto de clone do serviço Netflix, desenvolvido usando React. O objetivo deste projeto é replicar a página inicial do site Netflix, incluindo suas funcionalidades e layout.
