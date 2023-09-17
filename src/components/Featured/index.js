@@ -12,10 +12,9 @@ export default ({ item }) => {
   }
   let description = item.overview;
 
-  if(description.length > 200){
-    description = description.substring(0,200)+"...";
+  if (description.length > 200) {
+    description = description.substring(0, 200) + "...";
   }
-
   return (
     <section
       className="featured"
@@ -47,7 +46,7 @@ export default ({ item }) => {
                 textColor="#000"
                 href={`/watch/${item.id}`}
               >
-                <FontAwesomeIcon icon={faPlay} className="featured--icon"/>
+                <FontAwesomeIcon icon={faPlay} className="featured--icon" />
                 Assistir
               </StyledLink>
               <StyledLink
@@ -58,7 +57,11 @@ export default ({ item }) => {
                 + Minha Lista
               </StyledLink>
             </div>
-            <div className="featured--genres">Gêneros: {genres.join(", ")}</div>
+            {genres.length !== 0 && (
+              <div className="featured--genres">
+                Gêneros: {genres.join(", ")}
+              </div>
+            )}
           </div>
         </div>
       </div>
