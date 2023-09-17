@@ -6,8 +6,7 @@ Este é um projeto de clone do serviço Netflix, desenvolvido usando React. O ob
 
 - Navegação entre filmes e séries populares.
 - Carrosséis de destaque com categorias variadas.
-- Opções de busca e filtragem por gênero.
-- Reprodução de trailers ao passar o mouse sobre os cartões.
+- Modal para cada filme ou serie.
 - Responsividade para diferentes tamanhos de tela.
 
 ## Tecnologias Utilizadas
@@ -15,7 +14,9 @@ Este é um projeto de clone do serviço Netflix, desenvolvido usando React. O ob
 - React
 - React Router
 - Styled Components
-- Axios (para obtenção de dados de API)
+- Axios
+- React Flags Select
+- React word flags
 - HTML5
 - CSS3
 
@@ -29,8 +30,8 @@ Este é um projeto de clone do serviço Netflix, desenvolvido usando React. O ob
 
 ## Screenshots
 
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
+![Screenshot 1](public/print1.png)
+![Screenshot 2](public/print2.png)
 
 ## Contribuição
 
