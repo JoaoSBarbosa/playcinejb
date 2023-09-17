@@ -93,11 +93,10 @@
 }
 @media (max-width: 1000px) {
   .footer-credits {
-    padding: 2rem 4rem;
+    padding: 2rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    text-align: start;
   }
  
 }

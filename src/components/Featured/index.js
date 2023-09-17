@@ -10,6 +10,12 @@ export default ({ item }) => {
   for (let i in item.genres) {
     genres.push(item.genres[i].name);
   }
+  let description = item.overview;
+
+  if(description.length > 200){
+    description = description.substring(0,200)+"...";
+  }
+
   return (
     <section
       className="featured"
@@ -32,8 +38,8 @@ export default ({ item }) => {
             <div className="featured--adults">{!item.adult ? "+18" : ""}</div>
             <div className="featured--description">
               {item.overview === ""
-                ? "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy"
-                : item.overview}
+                ? "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'"
+                : description}
             </div>
             <div className="featured--buttons">
               <StyledLink

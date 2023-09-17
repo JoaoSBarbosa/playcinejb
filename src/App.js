@@ -22,11 +22,11 @@ export default () => {
       let chosen = originals[0].items.results[randomChosen];
       let chosenInfo = await Tmdb.getMovieInfo(chosen.id, "tv");
       setFeatureData(chosenInfo);
+      console.log(chosenInfo);
     };
 
     loadAll();
   }, []);
-
   useEffect(() => {
     const scrollListener = () => {
       if (window.scrollY > 10) {
@@ -40,7 +40,7 @@ export default () => {
       window.removeEventListener("scroll", scrollListener);
     };
   }, []);
-
+  // console.log(movieList);
   return (
     <div className="page">
       <Header black={blackHeader} />
@@ -50,6 +50,7 @@ export default () => {
           <MovieSlider key={key} title={item.title} items={item.items} />
         ))}
       </section>
+
       <Footer />
 
       {movieList.length <= 0 && (
